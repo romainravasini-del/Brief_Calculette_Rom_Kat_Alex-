@@ -1,9 +1,10 @@
-import soustraction
-#import
-#import
-#import
-#import
-#import
+from importlib import import_module #ta multiplication Katerina
+from soustraction import soustraction
+
+multiplication = import_module(
+    "Kat_ multiplication.multiplication"
+).multiplication
+
 def saisir_nombre(message):
     while True:
         saisie = input(message)
@@ -12,7 +13,9 @@ def saisir_nombre(message):
             return ma_variable
         except ValueError:
             print("Votre saisie est invalide, veuillez recommencer")
-            return input("Nouvelle saisie")
+            continue
 nombre_1 = saisir_nombre("Entrez votre premier nombre : ")
 nombre_2 = saisir_nombre("Entrez le deuxième nombre : ")
 print(f"Super ! Les nombres validés sont {nombre_1} et {nombre_2}")
+reponse = soustraction(nombre_1, nombre_2)
+print(f"Le résultat est : {nombre_1} - {nombre_2} = {reponse}")
