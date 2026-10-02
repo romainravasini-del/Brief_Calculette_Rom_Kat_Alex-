@@ -1,19 +1,11 @@
-from importlib import import_module #ta multiplication,division Katerina
 from soustraction import soustraction
 from addition import additionner_nombres
 from racine_carree import calculer_racine
-division = import_module(
-    "Kat_ multiplication.division"
-).division
-modulo = import_module(
-    "Kat_ multiplication.modulo"
-).modulo
-multiplication = import_module(
-    "Kat_ multiplication.multiplication"
-).multiplication
-exponentielle = import_module(
-    "Kat_multiplication.exponentielle"
-).exponentielle
+from logarithme import logarithme
+from division import division
+from multiplication import multiplication
+from modulo import modulo
+from exponentielle import exponentielle
 
 def saisir_nombre(message):
     while True:
