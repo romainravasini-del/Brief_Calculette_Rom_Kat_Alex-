@@ -3,10 +3,10 @@ from soustraction import soustraction
 from addition import additionner_nombres
 from racine_carree import calculer_racine
 division = import_module(
-    "Kat_ multiplication.multiplication"
+    "Kat_ multiplication.division"
 ).division
 modulo = import_module(
-    "Kat_ multiplication.multiplication"
+    "Kat_ multiplication.modulo"
 ).modulo
 multiplication = import_module(
     "Kat_ multiplication.multiplication"
@@ -31,6 +31,5 @@ num = saisir_nombre("Entrez un nombre : ")
 if num < 0:
     print("Erreur : Impossible de calculer la racine d'un nombre négatif.")
 else:
-    # 3. Tu appelles la fonction et tu affiches
     resultat = calculer_racine(num)
     print(f"Racine de {num} = {resultat}")
