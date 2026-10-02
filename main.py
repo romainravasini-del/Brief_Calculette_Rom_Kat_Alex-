@@ -6,8 +6,6 @@ from division import division
 from multiplication import multiplication
 from modulo import modulo
 from exponentielle import exponentielle
-from
-from
 
 def afficher_menu():
     print("\n" + "=" * 50)
