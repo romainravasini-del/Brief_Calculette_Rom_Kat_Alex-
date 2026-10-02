@@ -89,8 +89,6 @@ while True:
             else:
                 print(f"Résultat : {num} {dep} = {resultat:.2f} {arr}")
 
-
-    # --- Trigonométrie (10) ---
     elif choix == "10":
         angle = saisir_nombre("Entrez l'angle en radians : ")
         print(f"Sinus : {sin(angle)}, Cosinus : {cos(angle)}, Tangente : {tan(angle)}")
