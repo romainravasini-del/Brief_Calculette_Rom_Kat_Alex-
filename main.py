@@ -6,7 +6,7 @@ from division import division
 from multiplication import multiplication
 from modulo import modulo
 from exponentielle import exponentielle
-from trigonometrie import sin, cos, tan
+from trigonometrie import gerer_trigonometrie
 from unit_conversion import convertir_unite
 
 def afficher_menu():
@@ -90,8 +90,8 @@ while True:
                 print(f"Résultat : {num} {dep} = {resultat:.2f} {arr}")
 
     elif choix == "10":
-        angle = saisir_nombre("Entrez l'angle en radians : ")
-        print(f"Sinus : {sin(angle)}, Cosinus : {cos(angle)}, Tangente : {tan(angle)}")
+        gerer_trigonometrie()
+        
 
     else:
         print("Choix invalide, veuillez recommencer.")
