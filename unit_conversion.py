@@ -9,7 +9,3 @@ def convertir_unite(valeur, unite_depart, unite_arrivee):
         return valeur / 2.20462
     else:
         return "Conversion non disponible"
-
-
-# test print(convertir_unite(10,"km" , "miles"))
-# test print(convertir_unite(10,"kg" , "livres"))
