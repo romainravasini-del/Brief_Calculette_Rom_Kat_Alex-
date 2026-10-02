@@ -1,7 +1,7 @@
 from importlib import import_module #ta multiplication,division Katerina
 from soustraction import soustraction
 from addition import additionner_nombres
-from racine_carree import racine_carre
+from racine_carree import calculer_racine
 division = import_module(
     "Kat_ multiplication.multiplication"
 ).division
