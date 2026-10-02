@@ -6,7 +6,10 @@ from division import division
 from multiplication import multiplication
 from modulo import modulo
 from exponentielle import exponentielle
-
+def afficher_menu():
+    print("\n" + "="50)
+    print("\t"3 "Kalkulator" "\t"3)
+    print("="50 + "\n")
 def saisir_nombre(message):
     while True:
         saisie = input(message)
