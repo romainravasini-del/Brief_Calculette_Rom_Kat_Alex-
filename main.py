@@ -6,6 +6,8 @@ from division import division
 from multiplication import multiplication
 from modulo import modulo
 from exponentielle import exponentielle
+from trigonometrie import sin, cos, tan
+from unit_conversion import convertir_unite
 
 def afficher_menu():
     print("\n" + "=" * 50)
@@ -20,19 +22,18 @@ def afficher_menu():
     print("7. Exponentielle")
     print("8. Logarithme")
     print("9. Conversions d'unités")
-    print("10. Trigonométie")
+    print("10. Trigonométrie")
     print("11. Quitter")
 
 def saisir_nombre(message):
     while True:
         saisie = input(message)
         try:
-            ma_variable=float(saisie)
+            ma_variable = float(saisie)
             return ma_variable
         except ValueError:
-            print("Votre saisie est invalide, veuillez recommencer")
-            continue
-        
+            print("Votre saisie est invalide, veuillez recommencer.")
+
 while True:
     afficher_menu()
     choix = input("Entrez votre choix (1-11) : ")
@@ -67,13 +68,32 @@ while True:
         elif choix == "8":
             resultat = logarithme(nombre_1, nombre_2)
             print(f"Résultat : {resultat}")
-        elif choix == ["6","9"]:
-            num = saisir_nombre("Entrez un nombre : ")
+
+    elif choix in ["6", "9"]:
+        num = saisir_nombre("Entrez un nombre : ")
+        if choix == "6":
             if num < 0:
-                print("Erreur : Impossible de calculer la racine ou l'unité d'un nombre négatif.")
-        else:
-            resultat = calculer_racine(num)
-            print(f"Racine de {num} = {resultat}")
+                print("Erreur : Impossible de calculer la racine d'un nombre négatif.")
+            else:
+                resultat = calculer_racine(num)
+                print(f"Racine de {num} = {resultat}")
+        elif choix == "9":
+            num = saisir_nombre("Entrez la valeur à convertir : ")
+            dep = input("Entrez l'unité de départ (miles, km, kg, livres) : ").strip().lower()
+            arr = input("Entrez l'unité d'arrivée (miles, km, kg, livres) : ").strip().lower()
+            
+            resultat = convertir_unite(num, dep, arr)
+            
+            if isinstance(resultat, str):
+                print(resultat)
+            else:
+                print(f"Résultat : {num} {dep} = {resultat:.2f} {arr}")
+
+
+    # --- Trigonométrie (10) ---
+    elif choix == "10":
+        angle = saisir_nombre("Entrez l'angle en radians : ")
+        print(f"Sinus : {sin(angle)}, Cosinus : {cos(angle)}, Tangente : {tan(angle)}")
 
     else:
         print("Choix invalide, veuillez recommencer.")
