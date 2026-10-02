@@ -8,44 +8,13 @@ from modulo import modulo
 from exponentielle import exponentielle
 
 def afficher_menu():
-<<<<<<< HEAD
-    print("\n" , "=" * 50)
-    print("      CALCULATRICE     ")
-    print("=" * 50)
-=======
     print("\n" + "=" * 50)
     print("\t" * 3 + "Kalkulator" + "\t" * 3) 
     print("=" * 50 + "\n")               
->>>>>>> feature/trigonometrie
     print("1. Addition")
     print("2. Soustraction")
     print("3. Multiplication")
     print("4. Division")
-<<<<<<< HEAD
-    print("5. Modulo (Reste)")
-    print("6. Logarithme")
-    print("7. Racine carrée")
-    print("8. Exponentielle")
-    print("9. Trigonométrie")
-    print("10. Conversions")
-    print("11. Quitter")
-    print("=" * 50)
-    while True:
-        afficher_menu()
-        choix = input("Choisissez une option : ")
-    
-        if choix == "1": 
-            nombre_1 = saisir_nombre("Entrez votre premier nombre : ")
-            nombre_2 = saisir_nombre("Entrez le deuxième nombre : ")
-
-        elif choix == "7":
-            num = saisir_nombre("Entrez un nombre : ")
-            if num < 0:
-                print("Erreur : Impossible de calculer la racine d'un nombre négatif.")
-        else:
-            resultat = calculer_racine(num)
-            print(f"Racine de {num} = {resultat}")
-=======
     print("5. Modulo")
     print("6. Racine carrée")
     print("7. Exponentielle")
@@ -53,7 +22,6 @@ def afficher_menu():
     print("9. Conversions d'unités")
     print("10. Trigonométie")
     print("11. Quitter")
->>>>>>> feature/trigonometrie
 
 def saisir_nombre(message):
     while True:
@@ -69,9 +37,6 @@ while True:
     afficher_menu()
     choix = input("Entrez votre choix (1-11) : ")
 
-<<<<<<< HEAD
-num = saisir_nombre("Entrez un nombre : ")
-=======
     if choix == "11":
         print("Au revoir !")
         break
@@ -112,4 +77,3 @@ num = saisir_nombre("Entrez un nombre : ")
 
     else:
         print("Choix invalide, veuillez recommencer.")
->>>>>>> feature/trigonometrie
