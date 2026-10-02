@@ -1,7 +1,6 @@
 from importlib import import_module #ta multiplication Katerina
 from soustraction import soustraction
 from addition import additionner_nombres
-
 multiplication = import_module(
     "Kat_ multiplication.multiplication"
 ).multiplication
