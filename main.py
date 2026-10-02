@@ -1,7 +1,7 @@
 from importlib import import_module #ta multiplication,division Katerina
 from soustraction import soustraction
 from addition import additionner_nombres
-from addition import racine_carree
+from racine_carree import racine_carre
 division = import_module(
     "Kat_ multiplication.multiplication"
 ).division
@@ -25,3 +25,12 @@ def saisir_nombre(message):
 nombre_1 = saisir_nombre("Entrez votre premier nombre : ")
 nombre_2 = saisir_nombre("Entrez le deuxième nombre : ")
 print(f"Super ! Les nombres validés sont {nombre_1} et {nombre_2}")
+
+num = saisir_nombre("Entrez un nombre : ")
+
+if num < 0:
+    print("Erreur : Impossible de calculer la racine d'un nombre négatif.")
+else:
+    # 3. Tu appelles la fonction et tu affiches
+    resultat = calculer_racine(num)
+    print(f"Racine de {num} = {resultat}")

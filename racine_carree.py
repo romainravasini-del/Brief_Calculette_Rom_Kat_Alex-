@@ -1,7 +1,7 @@
 import math
 
-def racine_caree():
-    nombre_1 = float(input("Entrez un nombre : "))
+def calculer_racine(nombre):
+    return round(math.sqrt(nombre), 4)
     if nombre_1 < 0:
         print("Le nombre doit être supérieur ou égal à 0.")
     else:
