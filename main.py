@@ -11,6 +11,9 @@ modulo = import_module(
 multiplication = import_module(
     "Kat_ multiplication.multiplication"
 ).multiplication
+exponentielle = import_module(
+    "Kat_multiplication.exponentielle"
+).exponentielle
 
 def saisir_nombre(message):
     while True:
