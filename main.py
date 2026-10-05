@@ -77,7 +77,8 @@ while True:
                 print(f"Racine de {num} = {resultat}")
                 
         elif choix == "8":
-            resultat = logarithme() 
+            num = saisir_nombre("Entrez un nombre supérieur ou égal à 1 : ")
+            resultat = logarithme(num) 
             print(f"Résultat : {resultat}")
             
         elif choix == "9":
