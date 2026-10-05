@@ -10,10 +10,12 @@ from modulo import modulo
 from exponentielle import exponentielle
 from unit_conversion import convertir_unite
 
-# --- INTERFACE GRAPHIQUE ---
+
 st.title("🧮 Notre Super Calculatrice Graphique")
 
-# 1. Menu déroulant pour le choix de l'opération
+nombre_1 = 0.0
+nombre_2 = 0.0
+
 choix = st.selectbox(
     "Choisissez une opération :",
     [
@@ -30,7 +32,6 @@ choix = st.selectbox(
     ]
 )
 
-# 2. Gestion dynamique des zones de saisie selon l'opération
 if choix in ["Racine carrée", "Logarithme"]:
     nombre_1 = st.number_input("Entrez le nombre :", value=1.0 if choix == "Logarithme" else 0.0)
 
@@ -48,7 +49,6 @@ else:
     nombre_1 = st.number_input("Entrez votre premier nombre :", value=0.0)
     nombre_2 = st.number_input("Entrez le deuxième nombre :", value=0.0)
 
-# 3. Bouton unique pour déclencher l'exécution du calcul
 if st.button("Calculer 🚀"):
     
     if choix == "Addition":
@@ -82,10 +82,11 @@ if st.button("Calculer 🚀"):
         st.success(f"Résultat : {resultat}")
         
     elif choix == "Logarithme":
-        if nombre_1 <= 0:
-            st.error("Erreur : Le logarithme ne peut pas être calculé pour un nombre inférieur ou égal à 0.")
+
+        resultat = logarithme(nombre_1)
+        if isinstance(resultat, str):
+            st.error(resultat)
         else:
-            resultat = logarithme(nombre_1)
             st.success(f"Résultat : {resultat}")
         
     elif choix == "Racine carrée":
