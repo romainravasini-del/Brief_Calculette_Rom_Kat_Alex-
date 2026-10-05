@@ -42,7 +42,7 @@ while True:
         print("Au revoir !")
         break
 
-    elif choix in ["1", "2", "3", "4", "5", "7", "8"]:
+    elif choix in ["1", "2", "3", "4", "5", "7"]:
         nombre_1 = saisir_nombre("Entrez votre premier nombre : ")
         nombre_2 = saisir_nombre("Entrez le deuxième nombre : ")
         print(f"Super ! Les nombres validés sont {nombre_1} et {nombre_2}")
@@ -65,29 +65,26 @@ while True:
         elif choix == "7":
             resultat = exponentielle(nombre_1, nombre_2)
             print(f"Résultat : {resultat}")
-        elif choix == "8":
-            resultat = logarithme(nombre_1, nombre_2)
-            print(f"Résultat : {resultat}")
+        
 
-    elif choix in ["6", "9"]:
-        num = saisir_nombre("Entrez un nombre : ")
+    elif choix in ["6", "8", "9"]:
         if choix == "6":
+            num = saisir_nombre("Entrez un nombre : ")
             if num < 0:
                 print("Erreur : Impossible de calculer la racine d'un nombre négatif.")
             else:
                 resultat = calculer_racine(num)
                 print(f"Racine de {num} = {resultat}")
+                
+        elif choix == "8":
+            resultat = logarithme() 
+            print(f"Résultat : {resultat}")
+            
         elif choix == "9":
             num = saisir_nombre("Entrez la valeur à convertir : ")
             dep = input("Entrez l'unité de départ (miles, km, kg, livres) : ").strip().lower()
             arr = input("Entrez l'unité d'arrivée (miles, km, kg, livres) : ").strip().lower()
-            
             resultat = convertir_unite(num, dep, arr)
-            
-            if isinstance(resultat, str):
-                print(resultat)
-            else:
-                print(f"Résultat : {num} {dep} = {resultat:.2f} {arr}")
 
     elif choix == "10":
         gerer_trigonometrie()
